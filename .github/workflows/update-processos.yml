@@ -1,0 +1,18 @@
+name: Atualizar Processos
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Executa diariamente à meia-noite UTC
+  workflow_dispatch: # Permite que o workflow seja executado manualmente
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Atualizar processos
+        run: |
+          curl -X GET https://seu-site.vercel.app/atualizar
