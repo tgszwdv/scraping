@@ -1,8 +1,13 @@
 {
   "dependencies": {
     "express": "^4.19.2",
-    "fs": "^0.0.1-security",
     "puppeteer": "^22.15.0",
     "vercel": "^35.2.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20.x"
   }
 }
