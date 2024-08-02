@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const { exec } = require('child_process');
 const app = express();
+const port = process.env.PORT || 3000; // Usar a variável de ambiente PORT
 
 // Endpoint para executar o script de scraping e atualizar o JSON
 app.get('/atualizar', (req, res) => {
@@ -30,4 +31,6 @@ app.get('/atualizar', (req, res) => {
 // Servir a página HTML
 app.use(express.static('public'));
 
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});
