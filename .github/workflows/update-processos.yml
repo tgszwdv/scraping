@@ -15,4 +15,4 @@ jobs:
 
       - name: Atualizar processos
         run: |
-          curl -X GET https://seu-site.vercel.app/atualizar
+          curl -X GET https://scrapingsite-gcd3p77i1-tgszwdvs-projects.vercel.app/atualizar
