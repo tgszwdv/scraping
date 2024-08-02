@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Processos</title>
+</head>
+<body>
+    <h1>Processos Seletivos</h1>
+    <button id="atualizar-btn">Atualizar Processos</button>
+    <pre id="processos"></pre>
+
+    <script>
+        document.getElementById('atualizar-btn').addEventListener('click', async () => {
+            const response = await fetch('/atualizar');
+            const data = await response.json();
+            document.getElementById('processos').innerText = JSON.stringify(data, null, 2);
+        });
+    </script>
+</body>
+</html>
